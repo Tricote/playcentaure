@@ -1,0 +1,140 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>playcentaure</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="stylesheet" href="styles/f1374d06.main.css">
+  <script src="scripts/vendor/d7100892.modernizr.js"></script>
+</head>
+<body>
+  <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+
+  <script id="gameCaseTemplate" type="text/x-jquery-tmpl">
+    <div class="game-case">
+      <input id="${htmlId}" type="submit" value="${value}" class="play ${cssState}"/>
+    </div>
+  </script>
+
+  <script id="gameContextTemplate" type="text/x-jquery-tmpl">
+    <div id="score">Score : <span id="score-value">${score}</span></div>
+    <div id="timer">Time : <span id="timer-value">${timer}</span></div>
+    <div id="moves">Number of moves : <span id="moves-value">${moves}</span></div>
+  </script>
+
+  <script id="tableTemplate" type="text/x-jquery-tmpl">
+    <tr>
+      {{each row}} 
+        <td id="case_${i}_${j}"></td>          
+      {{/each}}
+    </tr>
+  </script>
+
+  <script id="gameControlsTemplate" type="text/x-jquery-tmpl">
+    <!-- <input id="undo" type="submit" value="Undo" /> -->
+    <!-- <a class="btn btn-default" id="save"><i class="icon-star"></i> Save</a> -->
+    <a class="btn btn-default" id="restart"><i class="icon-refresh"></i> Restart</a>
+  </script>
+
+  <script id="gameScoreBoardViewTemplate" type="text/x-jquery-tmpl">
+    <h2>Best scores</h2>
+  </script>
+
+  <script id="gameGameScoreTemplate" type="text/x-jquery-tmpl">
+    <div class="facebook-friend">
+      <div class="rank">${score}</div>
+      <div class="facebook_image"><img src="${user_facebook_image}"/></div>
+      <div class="score">${user_name}<br/><em>(${duration}s)</em></div>
+    </div>
+  </script>
+
+  <script id="gameGameOverModalTemplate" type="text/x-jquery-tmpl">
+    <div class="modal" id="gameOverModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h3>No more moves !</h3>
+          </div>
+          <div class="modal-body">
+            <p>Not bad ! Your score is <span class="score-value">${score}</span></p>
+          </div>
+          <div class="modal-footer">
+            <a href="#" id="close-game-over" class="btn btn-default">Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+
+  <div id="game-title">
+    <h1>
+        Centaure
+    </h1>
+  </div>
+
+  <div id="game-container-wrapper">
+    <div id="game-container">
+      <div id="game">
+        <div id="game-context">
+        
+        </div>
+        <div id="game-controls">
+          
+        </div>
+        <div>
+          <table id="game-table">
+            
+          </table>
+        </div>
+      </div>
+<!-- 
+      <div id="game-score-board">
+
+      </div>
+ -->
+    </div>
+  </div>
+
+
+<div id="modal-test" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='http://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+  </script>
+
+  <script data-main="scripts/9fe49cca.main" src="bower_components/requirejs/require.js"></script>
+</body>
+</html>
