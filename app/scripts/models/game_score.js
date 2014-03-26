@@ -1,21 +1,21 @@
 /*global define*/
 
 define([
-    'underscore',
-    'backbone'
+  'underscore',
+  'backbone'
 ], function (_, Backbone) {
-    'use strict';
+  'use strict';
 
-    var GameScore = Backbone.Model.extend({
-      defaults: {
-        "rank":  "",
-        "user_facebook_image":  "",
-        "score":  "",
-        "moves": "",
-        "duration": "",
-        "user_name": "",
-      },
-    });
+  var GameScore = Backbone.Model.extend({
+    defaults: {
+      'rank':  '',
+      'user_facebook_image':  '',
+      'score':  '',
+      'moves': '',
+      'duration': '',
+      'user_name': '',
+    },
+  });
 
-    return GameScore;
+  return GameScore;
 });

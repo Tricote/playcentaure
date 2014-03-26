@@ -129,14 +129,14 @@ jQuery.extend({
   }
 });
 
-if (jQuery.browser.msie)
-  jQuery(window).one("unload", function() {
-    var global = jQuery.timer.global;
-    for ( var label in global ) {
-      var els = global[label], i = els.length;
-      while ( --i )
-        jQuery.timer.remove(els[i], label);
-    }
-  });
+// if (jQuery.browser.msie)
+//   jQuery(window).one("unload", function() {
+//     var global = jQuery.timer.global;
+//     for ( var label in global ) {
+//       var els = global[label], i = els.length;
+//       while ( --i )
+//         jQuery.timer.remove(els[i], label);
+//     }
+//   });
 
 
