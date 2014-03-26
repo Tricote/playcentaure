@@ -1,0 +1,235 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+@font-face {
+  font-family: SketchRockwell-Bold;
+  src: url('SketchRockwell-Bold.ttf');
+}
+
+
+$color-text: #EEEEEE;
+$color-text-strong: #FFFFFF;
+$color-bg: #666666;
+$color-header: #222222;
+$color-border: #444444;
+
+
+/*
+$color-text: #222222;
+$color-text-strong: #111111;
+$color-bg: #EEEEEE;
+$color-header: #AAAAAA;
+$color-border: #444444;
+*/
+
+
+body {
+  background-color: $color-header;
+  color: $color-text;
+}
+
+#wrapper {
+  background-color: $color-header;
+
+}
+
+input.play {
+  width: 40px;
+  height: 40px;
+}
+
+#game-title {
+  background-color: $color-header;
+  border-bottom: 1px solid $color-border;
+
+  h1 {
+    font-family: SketchRockwell-Bold;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+}
+
+#game-container-wrapper {
+  background-image: url(../images/wood-bg-2.jpg);
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  #game-container {
+    width: 480px;
+    overflow:hidden;
+    margin: auto;
+    margin-top: 50px;
+
+    #game {
+      float:left;
+      margin-left: 30px;
+      font-size: 14px;
+      font-weight: bold;
+
+      #score {
+        float: left;
+        width: 70px;
+        #score-value {
+          font-family: SketchRockwell-Bold;
+          font-size: 20px;
+          color: $color-text-strong;
+        }
+      }
+
+      #timer {
+        float: right;
+      }
+
+      #moves {
+        display: none;
+      }
+
+      #game-controls {
+        width: 83px;
+        margin: auto;
+        #undo {
+          display: none;
+        }
+
+        #save {
+          //display: none;
+        }
+      }
+
+
+    }
+
+    #game-score-board {
+      float:right;
+      margin-right: 30px;
+
+      h2 {
+        font-family: SketchRockwell-Bold;
+        text-align: center;
+      }
+    }
+
+    #game-table {
+      border-spacing: 1px;
+      margin-top: 10px;
+      td {
+        width: 44px;
+        height: 44px;
+      }
+      .game-case {
+        margin: 1px;
+        input {
+          background: transparent;
+          font-family: SketchRockwell-Bold;
+          border: 2px solid $color-text;
+          margin: 0;
+
+
+          &.play {
+            width: 40px;
+            height: 40px;
+            color: $color-text-strong;
+          }
+
+          &.played {
+            font-size: 16px;
+            color: $color-text-strong;
+            background-color: $color-border;
+          }
+
+          &.last-played {
+            background-color: $color-text;
+            font-family: SketchRockwell-Bold;
+            color: $color-bg;
+            font-size: 24px;
+          }
+          &.valid {
+            background-color: green;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+.facebook-friend {
+  clear: both;
+  overflow: hidden;
+  padding: 5px 0;
+  border-top: 1px dotted $color-border;
+
+  .rank {
+    float: left;
+    width: 30px;
+    font-family: SketchRockwell-Bold;
+    font-size: 20px;
+    line-height: 50px;
+    padding-right: 10px;
+    color: $color-text-strong;
+  }
+  .facebook_image {
+    float: left;
+    padding-right: 10px;
+  }
+  .score {
+    float: left;
+  }
+
+}
+
+#main {
+  margin: auto;
+  margin-top: 50px;
+  width: 750px;
+
+  #centaure-image {
+    width: 368px;
+    float:left;
+  }
+
+  #centaure-connect {
+    h2 {
+      margin-bottom: 20px;
+      font-family: SketchRockwell-Bold;
+    }
+    width: 300px;
+    margin-top:50px;
+    margin-left:50px;
+    float:left;
+  }
+}
+
+
+#footer {
+  clear: both;
+  overflow:hidden;
+  margin: 0px auto;
+  padding-top: 30px;
+  color: $color-text - #555555;
+  background-color: $color-header;
+  border-top: 1px solid $color-border;
+
+  p {
+    text-align: center;
+  }
+}
+
+#gameOverModal {
+  display:none;
+  color: #222222;
+
+  p {
+    font-weight: normal;
+  }
+
+  .score-value {
+    font-family: SketchRockwell-Bold;
+    font-size: 20px;
+  }
+}
